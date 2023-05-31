@@ -1,4 +1,3 @@
-import com.android.build.gradle.internal.api.ApkVariantImpl
 import com.android.build.gradle.internal.api.ApkVariantOutputImpl
 
 plugins {
@@ -67,6 +66,7 @@ android {
 }
 
 dependencies {
+    //TODO 下面改为VersionCatalog
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
@@ -74,4 +74,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    //navigation
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
 }
