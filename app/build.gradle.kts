@@ -81,4 +81,7 @@ dependencies {
     //navigation
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
+    //retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
 }
