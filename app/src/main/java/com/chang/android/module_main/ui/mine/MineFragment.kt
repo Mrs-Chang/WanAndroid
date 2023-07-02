@@ -1,23 +1,13 @@
 package com.chang.android.module_main.ui.mine
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import com.chang.android.R
+import com.chang.android.databinding.FragmentMineBinding
+import com.chang.android.module_framework.base.BaseMvvmFragmentV2
+import com.chang.android.module_main.ui.mine.viewmodel.MineViewModel
 
-class MineFragment : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mine, container, false)
+class MineFragment : BaseMvvmFragmentV2<FragmentMineBinding, MineViewModel>() {
+    override fun initView(view: View, savedInstanceState: Bundle?) {
+        binding.textView.text = "MineFragment"
     }
 }

@@ -77,4 +77,12 @@ dependencies {
     //navigation
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
+    //retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    //okhttp-logging-interceptor
+    implementation(libs.logging.interceptor)
+    //mvvm
+    implementation(libs.live.data.ktx)
+    implementation(libs.view.model.ktx)
 }

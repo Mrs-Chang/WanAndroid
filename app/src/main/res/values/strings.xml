@@ -6,4 +6,7 @@
     <string name="tab_categories">Category\n</string>
     <string name="tab_system">System</string>
     <string name="tab_mine">Mine</string>
+
+    <!-- module_base-->
+    <string name="module_base_default_loading">加载中…</string>
 </resources>

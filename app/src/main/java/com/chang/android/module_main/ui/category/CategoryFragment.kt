@@ -1,23 +1,13 @@
 package com.chang.android.module_main.ui.category
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import com.chang.android.R
+import com.chang.android.databinding.FragmentCategoryBinding
+import com.chang.android.module_framework.base.BaseMvvmFragmentV2
+import com.chang.android.module_main.ui.category.viewmodel.CategoryViewModel
 
-
-class CategoryFragment : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_category, container, false)
+class CategoryFragment : BaseMvvmFragmentV2<FragmentCategoryBinding, CategoryViewModel>() {
+    override fun initView(view: View, savedInstanceState: Bundle?) {
+        binding.tvCategory.text = "CategoryFragment"
     }
 }
