@@ -1,4 +1,4 @@
-package com.chang.android.module_framework
+package com.chang.android.module_framework.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

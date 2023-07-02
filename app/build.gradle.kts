@@ -86,4 +86,7 @@ dependencies {
     implementation(libs.retrofit.gson)
     //okhttp-logging-interceptor
     implementation(libs.logging.interceptor)
+    //mvvm
+    implementation(libs.live.data.ktx)
+    implementation(libs.view.model.ktx)
 }

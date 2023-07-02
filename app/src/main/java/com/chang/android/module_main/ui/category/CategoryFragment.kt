@@ -1,31 +1,13 @@
 package com.chang.android.module_main.ui.category
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import com.chang.android.databinding.FragmentCategoryBinding
+import com.chang.android.module_framework.base.BaseMvvmFragmentV2
+import com.chang.android.module_main.ui.category.viewmodel.CategoryViewModel
 
-
-class CategoryFragment : Fragment() {
-
-    private var _binding: FragmentCategoryBinding? = null
-    private val binding get() = _binding!!
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentCategoryBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+class CategoryFragment : BaseMvvmFragmentV2<FragmentCategoryBinding, CategoryViewModel>() {
+    override fun initView(view: View, savedInstanceState: Bundle?) {
+        binding.tvCategory.text = "CategoryFragment"
     }
 }

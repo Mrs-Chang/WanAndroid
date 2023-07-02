@@ -4,6 +4,7 @@ kotlin = "1.8.0"
 nav_version = "2.5.3"
 retrofit_version = "2.9.0"
 logging_interceptor_version = "4.9.1"
+lifecycle_version = "2.3.1"
 
 [libraries]
 navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "nav_version" }
@@ -11,6 +12,8 @@ navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx",
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit_version" }
 retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit_version" }
 logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logging_interceptor_version" }
+live_data_ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle_version" }
+view_model_ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle_version" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

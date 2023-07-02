@@ -1,4 +1,4 @@
-package com.chang.android.module_framework
+package com.chang.android.module_framework.helper
 
 import android.app.Application
 
@@ -7,8 +7,8 @@ object AppHelper {
     private var isDebug = false
 
     fun init(application: Application, isDebug: Boolean) {
-        this.app = application
-        this.isDebug = isDebug
+        app = application
+        AppHelper.isDebug = isDebug
     }
 
     /**

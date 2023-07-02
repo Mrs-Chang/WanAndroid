@@ -1,30 +1,13 @@
 package com.chang.android.module_main.ui.system
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import com.chang.android.R
 import com.chang.android.databinding.FragmentSystemBinding
+import com.chang.android.module_framework.base.BaseMvvmFragmentV2
+import com.chang.android.module_main.ui.system.viewmodel.SystemViewModel
 
-class SystemFragment : Fragment() {
-    private var _binding: FragmentSystemBinding? = null
-    private val binding get() = _binding!!
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding =  FragmentSystemBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+class SystemFragment : BaseMvvmFragmentV2<FragmentSystemBinding, SystemViewModel>() {
+    override fun initView(view: View, savedInstanceState: Bundle?) {
+        binding.textSystem.text = "SystemFragment"
     }
 }

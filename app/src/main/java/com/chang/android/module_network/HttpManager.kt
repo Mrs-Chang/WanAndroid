@@ -1,8 +1,8 @@
 package com.chang.android.module_network
 
 import android.util.Log
-import com.chang.android.module_framework.AppHelper
-import com.chang.android.module_framework.NetworkUtil
+import com.chang.android.module_framework.helper.AppHelper
+import com.chang.android.module_framework.utils.NetworkUtil
 import com.chang.android.module_network.config.NetworkConfig
 import com.chang.android.module_network.constant.BASE_URL
 import com.chang.android.module_network.interceptor.CookiesInterceptor
