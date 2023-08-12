@@ -10,8 +10,8 @@ abstract class BaseMvvmActivity<VB : ViewBinding, VM : ViewModel> : BaseViewBind
     protected lateinit var viewModel: VM
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this)[getViewModelClass()]
+        super.onCreate(savedInstanceState)
     }
 
     private fun getViewModelClass(): Class<VM> {
