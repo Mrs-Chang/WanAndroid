@@ -14,6 +14,22 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="Transparent" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
     <!-- module_base -->
     <style name="Module.Base.Loading.Dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item><!--Dialog的windowFrame框为无 -->
@@ -25,5 +41,32 @@
         <item name="android:backgroundDimEnabled">true</item><!--屏幕背景是否变暗-->
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
+
+    <declare-styleable name="TitleBar">
+
+        <attr name="bottomTextVisible" format="boolean" />
+        <attr name="bottomText" format="reference|string" />
+        <attr name="bottomTextColor" format="reference" />
+        <attr name="leftText" format="reference|string" />
+        <attr name="middleText" format="reference|string" />
+        <attr name="rightText" format="reference|string" />
+        <attr name="rightVisible" format="boolean" />
+        <attr name="leftVisible" format="boolean" />
+        <attr name="showStatusBar" format="boolean" />
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="middleTextColor" format="reference" />
+        <attr name="rightTextColor" format="reference" />
+        <attr name="leftTextColor" format="reference" />
+        <attr name="leftTextSize" format="reference" />
+        <attr name="rightTextSize" format="dimension" />
+        <attr name="leftTextBold" format="boolean" />
+        <attr name="middleTextBold" format="boolean" />
+        <attr name="rightTextBold" format="boolean" />
+        <attr name="background" format="reference" />
+        <attr name="middleTextVisible" format="boolean" />
+        <attr name="rightIconVisible" format="boolean" />
+        <attr name="showDividerLine" format="boolean" />
+    </declare-styleable>
 
 </resources>
