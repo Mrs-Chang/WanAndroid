@@ -5,13 +5,17 @@ import androidx.lifecycle.MutableLiveData
 import com.chang.android.module_framework.toast.TipsToast
 import com.chang.android.module_framework.viewmodel.BaseViewModel
 import com.chang.android.moudule_login.model.User
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class LoginViewModel : BaseViewModel(){
+@HiltViewModel
+class LoginViewModel @Inject constructor(
+    private val loginRepository: LoginRepository
+) : BaseViewModel() {
     private val _loginLiveData = MutableLiveData<User?>()
     val loginLiveData: LiveData<User?> = _loginLiveData
     private val _registerLiveData = MutableLiveData<User?>()
     val registerLiveData: LiveData<User?> = _registerLiveData
-    private val loginRepository by lazy { LoginRepository() }
 
     /**
      * 登录

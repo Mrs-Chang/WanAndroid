@@ -25,12 +25,14 @@ import com.chang.android.module_framework.utils.getColorFromResource
 import com.chang.android.module_framework.utils.getStringFromResource
 import com.chang.android.moudule_login.login.LoginViewModel
 import com.chang.android.moudule_login.register.RegisterActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
+@AndroidEntryPoint
 class LoginActivity : BaseMvvmActivity<ActivityLoginBinding, LoginViewModel>() {
 
     private var isShowPassword = true
@@ -42,6 +44,7 @@ class LoginActivity : BaseMvvmActivity<ActivityLoginBinding, LoginViewModel>() {
             dark = false,
             fitSystemWindows = true
         )
+        initData()
     }
 
     override fun initView(savedInstanceState: Bundle?) {
@@ -49,7 +52,7 @@ class LoginActivity : BaseMvvmActivity<ActivityLoginBinding, LoginViewModel>() {
         initListener()
     }
 
-    override fun initData() {
+    private fun initData() {
         viewModel.loginLiveData.observe(this) { user ->
             //登录成功
             dismissLoading()
