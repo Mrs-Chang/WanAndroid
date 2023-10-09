@@ -6,7 +6,9 @@ import android.os.Bundle
 import com.chang.android.module_framework.helper.AppHelper
 import com.chang.android.module_framework.manager.ActivityManager
 import com.chang.android.module_framework.toast.TipsToast
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class WanApplication : Application(){
     override fun onCreate() {
         super.onCreate()

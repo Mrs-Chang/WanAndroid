@@ -14,7 +14,6 @@ abstract class BaseViewBindActivity<VB : ViewBinding> : BaseActivity() {
         binding = getViewBindingClass()
         setContentView(binding.root)
         initView(savedInstanceState)
-        initData()
     }
 
     private fun getViewBindingClass(): VB {
@@ -32,9 +31,5 @@ abstract class BaseViewBindActivity<VB : ViewBinding> : BaseActivity() {
     }
 
     abstract fun initView(savedInstanceState: Bundle?)
-
-    open fun initData() {
-
-    }
 
 }
