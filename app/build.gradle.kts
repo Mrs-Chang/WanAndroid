@@ -1,9 +1,11 @@
 import com.android.build.gradle.internal.api.ApkVariantOutputImpl
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("com.android.application")
-    //id("org.jetbrains.kotlin.android")可以替换如下：
-    kotlin("android")
+    id(libs.plugins.android.application.get().pluginId)
+    id(libs.plugins.kotlin.android.get().pluginId)
+    id(libs.plugins.kotlin.kapt.get().pluginId)
+    id(libs.plugins.hilt.plugin.get().pluginId)
 }
 
 android {
@@ -89,4 +91,7 @@ dependencies {
     //mvvm
     implementation(libs.live.data.ktx)
     implementation(libs.view.model.ktx)
+    // di
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 }
