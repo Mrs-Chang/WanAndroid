@@ -20,9 +20,9 @@ import com.chang.android.module_framework.base.BaseMvvmActivity
 import com.chang.android.module_framework.ext.onClick
 import com.chang.android.module_framework.ext.textChangeFlow
 import com.chang.android.module_framework.toast.TipsToast
-import com.chang.android.module_framework.utils.StatusBarSettingHelper
 import com.chang.android.module_framework.utils.getColorFromResource
 import com.chang.android.module_framework.utils.getStringFromResource
+import com.chang.android.module_framework.utils.immerse
 import com.chang.android.moudule_login.login.LoginViewModel
 import com.chang.android.moudule_login.register.RegisterActivity
 import kotlinx.coroutines.Dispatchers
@@ -37,11 +37,7 @@ class LoginActivity : BaseMvvmActivity<ActivityLoginBinding, LoginViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        StatusBarSettingHelper.immersiveStatusBar(
-            this@LoginActivity,
-            dark = false,
-            fitSystemWindows = true
-        )
+        immerse()
     }
 
     override fun initView(savedInstanceState: Bundle?) {
