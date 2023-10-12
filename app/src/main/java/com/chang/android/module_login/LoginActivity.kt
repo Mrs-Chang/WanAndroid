@@ -1,4 +1,4 @@
-package com.chang.android.moudule_login
+package com.chang.android.module_login
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.text.method.HideReturnsTransformationMethod
 import android.text.method.LinkMovementMethod
 import android.text.method.PasswordTransformationMethod
 import android.text.style.ClickableSpan
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -16,6 +17,7 @@ import androidx.lifecycle.lifecycleScope
 import com.chang.android.MainActivity
 import com.chang.android.R
 import com.chang.android.databinding.ActivityLoginBinding
+import com.chang.android.module_common.provider.UserServiceProvider
 import com.chang.android.module_framework.base.BaseMvvmActivity
 import com.chang.android.module_framework.ext.onClick
 import com.chang.android.module_framework.ext.textChangeFlow
@@ -23,17 +25,21 @@ import com.chang.android.module_framework.toast.TipsToast
 import com.chang.android.module_framework.utils.getColorFromResource
 import com.chang.android.module_framework.utils.getStringFromResource
 import com.chang.android.module_framework.utils.immerse
-import com.chang.android.moudule_login.login.LoginViewModel
-import com.chang.android.moudule_login.register.RegisterActivity
+import com.chang.android.module_login.login.LoginViewModel
+import com.chang.android.module_login.register.RegisterActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginActivity : BaseMvvmActivity<ActivityLoginBinding, LoginViewModel>() {
+
+    @Inject
+    lateinit var userServiceProvider: UserServiceProvider
 
     private var isShowPassword = true
 
@@ -54,6 +60,7 @@ class LoginActivity : BaseMvvmActivity<ActivityLoginBinding, LoginViewModel>() {
             dismissLoading()
             user?.let {
                 //TODO save user info
+                userServiceProvider.saveUserInfo(user)
                 startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                 finish()
             }

@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".moudule_login.register.RegisterActivity"
+            android:name=".module_login.register.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -30,7 +30,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".moudule_login.LoginActivity"
+            android:name=".module_login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

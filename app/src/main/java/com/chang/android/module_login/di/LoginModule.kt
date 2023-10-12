@@ -1,7 +1,7 @@
-package com.chang.android.moudule_login.di
+package com.chang.android.module_login.di
 
-import com.chang.android.moudule_login.login.ILoginRepository
-import com.chang.android.moudule_login.login.LoginRepository
+import com.chang.android.module_login.login.ILoginRepository
+import com.chang.android.module_login.login.LoginRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.chang.android.moudule_login.register
+package com.chang.android.module_login.register
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,6 @@ import android.text.Spanned
 import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -24,9 +23,8 @@ import com.chang.android.module_framework.toast.TipsToast
 import com.chang.android.module_framework.utils.StatusBarSettingHelper
 import com.chang.android.module_framework.utils.getColorFromResource
 import com.chang.android.module_framework.utils.getStringFromResource
-import com.chang.android.moudule_login.login.LoginViewModel
+import com.chang.android.module_login.login.LoginViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn

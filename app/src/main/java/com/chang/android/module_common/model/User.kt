@@ -1,10 +1,9 @@
-package com.chang.android.moudule_login.model
+package com.chang.android.module_common.model
 
-import androidx.annotation.Keep
-import com.chang.android.module_framework.base.ApiModel
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
-
-@Keep
+@Parcelize
 data class User(
     val id: Int? = 0,
     val username: String?,
@@ -16,7 +15,7 @@ data class User(
     var signature: String?,
     var sex: String?,
     var birthday: String? = ""
-) : ApiModel() {
+): Parcelable {
     fun getName(): String? {
         return if (!nickname.isNullOrEmpty()) {
             nickname

@@ -1,8 +1,8 @@
-package com.chang.android.moudule_login.login
+package com.chang.android.module_login.login
 
+import com.chang.android.module_common.model.User
 import com.chang.android.module_network.manager.ApiManager
 import com.chang.android.module_network.repository.BaseRepository
-import com.chang.android.moudule_login.model.User
 import javax.inject.Inject
 
 class LoginRepository @Inject constructor(): BaseRepository(), ILoginRepository {

@@ -1,7 +1,7 @@
 package com.chang.android.module_network.api
 
+import com.chang.android.module_common.model.User
 import com.chang.android.module_network.response.BaseResponse
-import com.chang.android.moudule_login.model.User
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST

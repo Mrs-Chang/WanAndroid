@@ -1,10 +1,10 @@
-package com.chang.android.moudule_login.login
+package com.chang.android.module_login.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.chang.android.module_common.model.User
 import com.chang.android.module_framework.toast.TipsToast
 import com.chang.android.module_framework.viewmodel.BaseViewModel
-import com.chang.android.moudule_login.model.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
